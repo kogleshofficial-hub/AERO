@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, type MouseEvent } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowDownRight, ArrowLeft, ArrowRight, ArrowUpRight, GitBranch, Layers3 } from "lucide-react";
 import { projects, type Project } from "@/lib/projects";
@@ -31,7 +31,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   const rotateX = useSpring(useTransform(y, [-0.5,0.5], [3.5,-3.5]), { stiffness: 160, damping: 19 });
   const rotateY = useSpring(useTransform(x, [-0.5,0.5], [-4.5,4.5]), { stiffness: 160, damping: 19 });
   const [hovered,setHovered] = useState(false);
-  const move = (event: React.MouseEvent<HTMLElement>) => { const r=event.currentTarget.getBoundingClientRect(); x.set((event.clientX-r.left)/r.width-.5); y.set((event.clientY-r.top)/r.height-.5); };
+  const move = (event: MouseEvent<HTMLElement>) => { const r=event.currentTarget.getBoundingClientRect(); x.set((event.clientX-r.left)/r.width-.5); y.set((event.clientY-r.top)/r.height-.5); };
   return <motion.article className={"project-card project-card--"+project.motif+(hovered?" is-hovered":"")} style={{rotateX,rotateY,transformPerspective:1450}} onMouseMove={move} onMouseEnter={()=>setHovered(true)} onMouseLeave={()=>{setHovered(false);x.set(0);y.set(0);}} initial={{opacity:0,y:48}} whileInView={{opacity:1,y:0,transition:{duration:.7,delay:index*.07}}} viewport={{once:true,amount:.18}}>
     <div className="project-card__shell">
       <div className="project-card__heading"><div className="project-card__serial mono"><span>{project.number} / 05</span><span className="project-status"><i/>{project.status}</span></div><h3>{project.name}<sup>™</sup></h3><p className="project-card__category mono">{project.category}</p></div>
