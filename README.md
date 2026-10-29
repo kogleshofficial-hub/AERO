@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000. For a production check use `npm run build` then `npm start`.
+Open http://localhost:3000. Run `npm run typecheck` to type-check, then use `npm run build` and `npm start` for production verification.
 
 ## Included
 
