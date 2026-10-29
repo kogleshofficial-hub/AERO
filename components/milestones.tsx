@@ -31,7 +31,7 @@ export default function Milestones() {
           <div className="achievement-item"><div className="achievement-medal"><Award size={20}/></div><div><span className="mono">28–29 SEP 2024 / MAPUSA, GOA</span><strong>VIFA Gewinn India Open</strong><p>International Taekwondo Championship · Gold medal</p></div><b className="achievement-tag">GOLD</b></div>
           <div className="achievement-item"><div className="achievement-medal achievement-medal--bronze"><Award size={20}/></div><div><span className="mono">2025 / KOREA</span><strong>10th MBC Cup Open</strong><p>International Taekwondo Championship · Bronze medal</p></div><b className="achievement-tag achievement-tag--bronze">BRONZE</b></div>
         </div>
-        <div className="duality-panel__bottom mono"><span>RANK / BLACK BELT</span><span>RESULTS / PERSONAL RECORD</span></div>
+        <div className="duality-panel__bottom mono"><span>DISCIPLINE / TAEKWONDO</span><span>RESULTS / PERSONAL RECORD</span></div>
       </motion.article>
       <motion.article className="duality-panel creator-panel" initial={{ opacity: 0, y: 26 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: .65, delay: .08 }}>
         <div className="duality-panel__top mono"><span>EXPERIMENT / 002</span><span>THE CREATOR <CirclePlay size={14}/></span></div>
