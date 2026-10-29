@@ -17,16 +17,16 @@ const github = "https://github.com/kogleshofficial-hub";
 
 export const projects: Project[] = [
   {
-    id: "mirror", number: "01", name: "MIRROR", category: "DETERMINISTIC SIMULATION", status: "CORE SYSTEM",
+    id: "mirror", number: "01", name: "MIRROR", category: "DETERMINISTIC SIMULATION", status: "SYSTEM DESIGN",
     description: "A decision-simulation engine for testing how constrained resources, queues and changing conditions affect outcomes.",
     principle: "Same supported inputs. Same rules. Repeatable outcomes.",
     stack: ["NEXT.JS", "REACT", "TYPESCRIPT"], motif: "mirror", href: portfolio, source: github
   },
   {
-    id: "gridpulse", number: "02", name: "GRIDPULSE", category: "INFRASTRUCTURE INTELLIGENCE", status: "CORE SYSTEM",
+    id: "gridpulse", number: "02", name: "GRIDPULSE", category: "INFRASTRUCTURE INTELLIGENCE", status: "SIGNAL INTEGRITY",
     description: "An evidence-first control plane that keeps observed telemetry separate from validation, prediction and explanation.",
     principle: "Evidence first. Inference second. Never fabricate a signal.",
-    stack: ["NEXT.JS", "POSTGRESQL", "ZOD", "AZURE"], motif: "grid", href: portfolio + "/projects/gridpulse", source: github
+    stack: ["NEXT.JS", "REACT", "TYPESCRIPT"], motif: "grid", href: portfolio + "/projects/gridpulse", source: github
   },
   {
     id: "pace", number: "03", name: "PACE", category: "ACADEMIC WORKLOAD PLANNING", status: "CORE SYSTEM",
@@ -35,13 +35,13 @@ export const projects: Project[] = [
     stack: ["NEXT.JS", "TYPESCRIPT", "APPWRITE"], motif: "pace", href: portfolio, source: github
   },
   {
-    id: "synapse", number: "04", name: "SYNAPSE", category: "LOCAL-FIRST PLANNING", status: "PRODUCT BUILD",
+    id: "synapse", number: "04", name: "SYNAPSE", category: "LOCAL-FIRST PLANNING", status: "WORKLOAD PLANNING",
     description: "A local-first planner that converts tasks and available time into a clear, deterministic next-action schedule.",
     principle: "Reduce noise. Expose the next useful move.",
     stack: ["REACT", "TYPESCRIPT", "LOCAL STORAGE"], motif: "synapse", href: portfolio, source: github
   },
   {
-    id: "foodloop", number: "05", name: "FOODLOOP", category: "SOCIAL-IMPACT MVP", status: "PRODUCT BUILD",
+    id: "foodloop", number: "05", name: "FOODLOOP", category: "SOCIAL-IMPACT MVP", status: "LOCAL-FIRST TOOL",
     description: "A food-rescue MVP for structured surplus-food listings, availability and requests. The first version was built on a phone.",
     principle: "Useful software starts with a real-world problem.",
     stack: ["NEXT.JS", "SUPABASE", "POSTGRESQL"], motif: "food", href: portfolio, source: github
