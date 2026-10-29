@@ -1,10 +1,10 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Suspense, useEffect, useMemo, useRef } from "react";
+import { Suspense, useEffect, useMemo, useRef, type MutableRefObject } from "react";
 import * as THREE from "three";
 
-type CoreProps = { mouse: React.MutableRefObject<THREE.Vector2>; pulse: React.MutableRefObject<number> };
+type CoreProps = { mouse: MutableRefObject<THREE.Vector2>; pulse: MutableRefObject<number> };
 
 const vertexShader = `
 uniform float uTime;
@@ -35,8 +35,8 @@ varying float vSeed;
 void main() {
   vec2 p = gl_PointCoord - vec2(0.5);
   float d = length(p);
-  float dotCore = smoothstep(0.5, 0.03, d);
-  float halo = smoothstep(0.5, 0.12, d) * 0.28;
+  float dotCore = 1.0 - smoothstep(0.03, 0.5, d);
+  float halo = (1.0 - smoothstep(0.12, 0.5, d)) * 0.28;
   vec3 amber = vec3(1.0, 0.55, 0.15);
   vec3 ice = vec3(0.32, 0.74, 0.95);
   vec3 colour = mix(amber, ice, smoothstep(0.62, 1.0, vSeed));
