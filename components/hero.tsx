@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { ArrowDown, ArrowUpRight, Crosshair, MoveUpRight } from "lucide-react";
 
 const AeroCore = dynamic(() => import("@/components/aero-core"), {
@@ -9,7 +9,7 @@ const AeroCore = dynamic(() => import("@/components/aero-core"), {
   loading: () => <div className="core-fallback" aria-hidden="true"><span /></div>
 });
 
-const rise = {
+const rise: Variants = {
   hidden: { opacity: 0, y: 28 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
 };
